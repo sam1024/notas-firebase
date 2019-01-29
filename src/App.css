@@ -1,4 +1,41 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /*background: #EB5757;  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: aliceblue;
+  /*background: #200122;  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to top, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to left, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  /*background: #000428;  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to top, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.titleApp {
+  text-align: center;  
+}
+
+.notesBody {
+  margin-top: 2em;
+  padding: .1em 0 1em 0;
+  background-color: rgba(0, 0,0, .5);
+}
+
+.btn {
+  margin: 1em 0;
+  display: block;
+  background-color: #004e92;
+  padding: .3em 1.5em;
+  border: none;
+  border-radius: .2em;
+}
+
+/*.App {
   text-align: center;
 }
 
@@ -29,4 +66,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/
