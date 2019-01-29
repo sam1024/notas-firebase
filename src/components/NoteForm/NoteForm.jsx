@@ -14,7 +14,7 @@ class NoteForm extends Component {
                 <div name="noteform" className="form">
     <input type="text" name="alumno" className="inputItem" placeholder="Alumno" ref={input => {this.txtinput = input;}}/>{/*EL ATRIBUTO ref ES COMO SI FUERA UN ATRIBUTO id, 
     LO VAMOS A USAR PARA PODER OBTENER SU VALOR, EN ESTE CASO ESTAMOS USANDO EL NOMBRE txtinput PARA QUE PODAMOS HACER REFERENCIA AL ELEMENTO DESDE CUALQUIER PARTE DEL CÓDIGO*/}
-                    <select name="articulos" className="inputItem arrowDown" placeholder="Articulo" ref={sel => {this.selart = sel}}>
+                    <select name="articulos" className="inputItem arrowDown" ref={sel => {this.selart = sel}}>
                         <option value="0"></option>
                         <option value="Videoproyector">Videoproyector</option>
                         <option value="Cable VGA">Cable VGA</option>
@@ -33,17 +33,17 @@ class NoteForm extends Component {
 
     addRegister() {
         //console.log("Nombre: " + this.txtinput.value + " Articulos: " + this.selart.value);
-        let data;
-        
-        data = [
-            {nombre: this.txtinput.value, articulos: this.selart.value}
-        ];
+        let nombre, articulos;
+        nombre = this.txtinput.value;
+        articulos = this.selart.value;
+        /*data = [this.txtinput.value, this.selart.value];
         /*for(let a of data) {
             console.log(a);            
         }*/
-        console.log("data:\n" + "nombre: " + data.nombre + "\narticulos: " + data.articulos);
+        //console.log("data:\n" + "nombre: " + data[0] + "\narticulos: " + data[1]);
+        console.log(nombre, articulos);
         
-        this.props.entregaArt(data);
+        this.props.addRegister(nombre, articulos);
     }
 
 }

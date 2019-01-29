@@ -19,6 +19,7 @@ class App extends Component {
         {id: 3, _fechaPrestamo: this.obtFecha(), nombre: 'Alumno1', articulos: 'Mouse', status: "Prestado", _fechaEntrega: ""}
       ]     
     };
+    this.addRegister = this.addRegister.bind(this);
   }
   render() {
     return (
@@ -50,7 +51,7 @@ class App extends Component {
           
         </div>
         <div className="notesfooter">
-          <NoteForm entregaArt={() => this.addRegister()} />{/* CON entregaArt={this.entregaArt()} LE ESTAMOS PASANDO LOS DATOS AL FORMULARIO */}
+          <NoteForm addRegister={this.addRegister} />{/* CON entregaArt={this.entregaArt()} LE ESTAMOS PASANDO LOS DATOS AL FORMULARIO */}
         </div>
       </div>
     );
@@ -74,14 +75,14 @@ class App extends Component {
   }
 
   /* ESTE MÉTODO LO UNICO QUE HACE ES AREGAR LOS NUEVOS DATOS AL ARREGLO */
-  addRegister(data) {
+  addRegister(nombre, articulos) {
     let { notes } = this.state;//CON ESTA LINEA ESTAMOS GUARDANDO LAS NOTAS QUE TENEMOS EN EL ESTADO
-    console.log("nombre: ", this.data.nombre);
+    console.log("nombre: " + nombre + "articulos: " + articulos);
     notes.push({
       id: notes.length + 1,
       _fechaPrestamo: this.obtFecha(),
-      nombre: data.nombre,
-      articulos: data.articulos,
+      nombre: nombre,
+      articulos: articulos,
       status: 1,
       _fechaEntrega: ""
     });
